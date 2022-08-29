@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MySQL基础</title><url>blog.puijhor.xyz/post/mysql_basic/</url><categories><category>数据库</category></categories><tags><tag>MySQL</tag></tags><content type="html">数据库 概念：用于存储和管理数据的仓库。 历史： 没有数据库 层次数据库 网状数据库 关系数据库 关系对象型数据库 MySQL属于关系数据库。它存储“关系”二维表，表中内容可以直观地反映实体间的关系。
+所有的数据库厂家遵从SQL标准，但标准未定义的一些具体细节（如分页）的实现上有所不同，称为“SQL方言”
+数据库一般很少迁移，因为不同数据库的SQL方言不同
+数据库引擎InnoDB与MyISAM的区别：
+引擎 MySQL版本 事务 表锁 行锁 外键约束 MyISAM 5.5之前 × √ × × InnoDB 5.5之后 √ √ √ √ 结构 数据库 数据表 记录 每个数据库中有若干表，表由行（表记录）和列（表结构）组成。
+“结构”相当于定义每一列数据类型的“表头”。
+“记录”是表中存储的数据，一行数据称为一条记录，每个表中有若干条记录。
+SQL语句的要求 写完一条SQL语句，使用分号结束 SQL关键字 不区分大小写，推荐写大写 表名、数据库名、列名 不区分大小写，推荐写小写 基本操作 操作数据库 显示数据库：
+1 SHOW DATABASE; 创建数据库：
+1 CREATE DATABSE 【数据库名】 IF NOT EXISTS; 使用IF NOT EXISTS避免因数据库已存在而报错
+使用某个数据库：
+1 USE 【数据库名】 ; 删除数据库：
+1 DROP DATABASE 【数据库名】; 修改数据库：
+1 ALTER DATABASE 【数据库名】; 操作表 显示当前数据库中的所有表：
+1 SHOW TABLES; 显示表结构：
+1 DESC 【表名】; 向表中添加列：
+1 ALTER TABLE 【表名】 ADD 【列名】; 操作数据 向表中插入数据：
+1 INSERT INTO 【表名】 VALUES();</content></entry><entry><title>关于我</title><url>blog.puijhor.xyz/about.html</url><categories/><tags/><content type="html">在这里，你可以叫我yha4o2l，我是一名正在学习Java全栈开发的学生。
+我在这里会放上一些学习全栈开发的笔记。
+本博客部署在 github pages ，域名为 https://yha4o2l.github.io 。</content></entry><entry><title>站点示例</title><url>blog.puijhor.xyz/flinks.html</url><categories/><tags/><content type="html"></content></entry></search>
