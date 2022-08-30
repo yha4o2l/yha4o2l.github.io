@@ -7,7 +7,7 @@
 “记录”是表中存储的数据，一行数据称为一条记录，每个表中有若干条记录。
 SQL语句的要求 写完一条SQL语句，使用分号结束 SQL关键字 不区分大小写，推荐写大写 表名、数据库名、列名 不区分大小写，推荐写小写 基本操作 操作数据库 显示数据库：
 1 SHOW DATABASE; 创建数据库：
-1 CREATE DATABSE 【数据库名】 IF NOT EXISTS; 使用IF NOT EXISTS避免因数据库已存在而报错
+1 CREATE DATABSE IF NOT EXISTS 【数据库名】; 使用IF NOT EXISTS避免因数据库已存在而报错
 使用某个数据库：
 1 USE 【数据库名】 ; 删除数据库：
 1 DROP DATABASE 【数据库名】; 修改数据库：
