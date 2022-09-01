@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MySQL基础</title><url>https://blog.puijhor.xyz/post/mysql_basic/</url><categories><category>数据库学习</category></categories><tags><tag>MySQL</tag></tags><content type="html">数据库 概念：用于存储和管理数据的仓库。 历史： 没有数据库 层次数据库 网状数据库 关系数据库 关系对象型数据库 MySQL属于关系数据库。它存储“关系”二维表，表中内容可以直观地反映实体间的关系。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>MySQL高级用法</title><url>https://blog.puijhor.xyz/post/mysql_extra/</url><categories><category>数据库学习</category></categories><tags><tag>MySQL</tag></tags><content type="html">MySQL高级用法 分页 分页查询是数据库的方言，不同的数据库有不同的实现。例如，MySQL中是 LIMIT，oracle中是 ROWNUM，sql server中是 ROW_NUMBER。 用法：
+1 SELECT FROM 【表名】 LIMIT 【分页起始行】,【分页大小】 起始索引从0开始，起始索引 = （查询页码 - 1）* 每页显示记录数。 在MySQL中，如果分页查询的是第一页数据，起始索引可以省略，直接简写为 LIMIT 【记录数】。 约束 保证数据的正确性、完整性、有效性
+主键约束 唯一约束 非空约束 检查约束 外键约束 默认值约束 主键约束
+特点： 唯一：一张表只能有一个主键约束 非空：主键不能为空 关键字：PRIMARY KEY 设置方法： 在列的后面声明 在创建表的时候，在所有列声明之后，单独起一行声明 修改表的时候进行声明 设置建议 主键不要设置在有意义的列 修改数据时不要修改主键 唯一约束
+特点：值唯一，允许出现一个空值 关键字：UNIQUE 外键约束
+外键：外键是在一张表中引用的另一张表的主键。 外键约束：用于在两个表之间建立关系，限制外键只能是引用指定表中指定列的值 在互联网开发中，外键一定存在，但是外键约束一般不加 数据库的备份与恢复 备份 命令行：mysqldump -u 【用户名】 -p【密码】 【数据库名】 &amp;gt; 【sql文件路径】 使用mysqldump导出的SQL文件只有数据表和其中数据，并不包含数据库
+恢复 SOURCE 【sql文件路径】 mysqldump -u 【用户名】 -p【密码】 【数据库名】 &amp;lt; 【sql文件路径】 数据库的多表查询 方式： 联合查询 表连接查询 子查询 联合查询 把多个SELECT查询的结果连接起来
+关键字：
+UNION（去重） UNION ALL（不去重） 要求：结果集的列的个数相同，列含义相同
+连接查询 关键字：JOIN
+方式：
+内连接 外连接 左外连接 右外连接 自然连接（列出两个表的笛卡尔积，不常用） 自连接 标准写法：
+SELECT n张表连接，需要最小n-1个表相连</content></entry><entry><title>MySQL基础</title><url>https://blog.puijhor.xyz/post/mysql_basic/</url><categories><category>数据库学习</category></categories><tags><tag>MySQL</tag></tags><content type="html">数据库 概念：用于存储和管理数据的仓库。 历史： 没有数据库 层次数据库 网状数据库 关系数据库 关系对象型数据库 MySQL属于关系数据库。它存储“关系”二维表，表中内容可以直观地反映实体间的关系。
 所有的数据库厂家遵从SQL标准，但标准未定义的一些具体细节（如分页）的实现上有所不同，称为“SQL方言”
 数据库一般很少迁移，因为不同数据库的SQL方言不同
 数据库引擎InnoDB与MyISAM的区别：
