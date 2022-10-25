@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>项目复盘笔记</title><url>https://blog.puijhor.xyz/post/note1/</url><categories><category>杂记</category></categories><tags><tag>复盘</tag></tags><content type="html">这是一次简单的合作项目的复盘。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><search><entry><title>1026</title><url>https://blog.puijhor.xyz/post/1026/</url><categories><category/></categories><tags><tag/><tag/></tags><content type="html">1026</content></entry><entry><title>项目复盘笔记</title><url>https://blog.puijhor.xyz/post/note1/</url><categories><category>杂记</category></categories><tags><tag>复盘</tag></tags><content type="html">这是一次简单的合作项目的复盘。
 这个项目是一个简单的前端项目，项目使用了git。参与者有3人，我在其中负责部分网页模块、样式，也部分担任了项目合并的工作。
 遇到的问题
 需要网页适配不同的屏幕宽度 参考已有页面的效果，按照页面宽度设置不同的行为。 使用的jQuery插件不能很好地适配页面，导致已经做好的页面布局异常 解决方案： 对于较大型的插件，使项目样式适配插件； 对于较小型的插件，重写要实现的主要功能。 预期效果无法完全实现，要实现一些细节上的动画效果很花时间 权衡之下做出取舍，舍弃20%的细节动画，把时间主要用在实现80%的主要功能上。 修改一处变量命名/文件路径导致出现bug 解决方案：对于变量命名/文件路径，要么不要改，要么就连同其用法一起改。 由不同人负责的部分巧合地共用了一个样式选择器名，但是页面引用的某个CSS文件中没有限定该选择器的范围，导致样式被错误地应用到它不应该出现的地方。 之后修改了一些同名的class，又在CSS文件中限定相应样式的使用范围，总算解决了这个问题。 感想
