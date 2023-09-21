@@ -32,6 +32,12 @@ paginate: 10
 # 开启支持表情符号
 # Enable Emoji support
 enableEmoji: true
+
+enableGitInfo: true
+
+frontmatter:
+  lastmod: ['lastmod', ':git', 'date', 'publishDate']
+
 # 让 Makedown 文档支持 HTML 语法，高亮，文章目录等功能
 # Make markdown content support HTML syntax, highlight, toc etc.
 markup:
@@ -567,7 +573,7 @@ params:
   codeblock:
     # 支持样式类型： default | flat | mac
     # Available values: default | flat | mac
-    style: mac
+    style: default
     # 在代码块上添加拷贝按钮
     # Add copy button on codeblock
     copyBtn: true

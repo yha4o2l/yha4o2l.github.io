@@ -4,7 +4,7 @@ description: "{{ .Name }}"
 keywords: "{{replace .Name "-" ","}}"
 
 date: {{ .Date }}
-lastmod: {{ .Date }}
+lastmod: 
 
 categories:
   -
