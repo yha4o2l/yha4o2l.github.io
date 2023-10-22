@@ -1,5 +1,5 @@
 ---
-title: "我使用 Docker 运行 MariaDB 的常用命令及部分参数解析"
+title: "我使用 Docker 运行 MariaDB 的常用命令"
 description: ""
 keywords: "Docker,docker,MariaDB,mariadb,MySQL,mysql"
 
@@ -7,7 +7,7 @@ date: 2023-09-21T00:58:13+08:00
 lastmod: 2023-09-21T00:58:13+08:00
 
 categories:
-  - 学习笔记
+  - 配置记录
 tags:
   - Docker
   - MySQL
